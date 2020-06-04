@@ -16,11 +16,11 @@ chat Space
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|send|string|null: false|
+||string|null: false|
 ### Association
 - has_many :comments
 - has_many :groups_users
-- has_many :users, through:groups 
+- has_many :users, through: :groups_users
 
 ## commentsテーブル
 |Column|Type|Options|
