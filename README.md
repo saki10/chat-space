@@ -8,8 +8,9 @@ chat Space
 |nickname|string|null: false|
 ### Association
 - has_many :groups_users
+- has_many :groups, through: :groups_users
 - has_many :comments
-- belongs_to :users 
+
 
 ## groupsテーブル
 |Column|Type|Options|
@@ -18,7 +19,8 @@ chat Space
 |send|string|null: false|
 ### Association
 - has_many :comments
-- has_many :groups_users   
+- has_many :groups_users
+- has_many :users, through:groups 
 
 ## commentsテーブル
 |Column|Type|Options|
@@ -29,7 +31,7 @@ chat Space
 |group_id|integer|null: false, foreign_key: true｜
 ### Association
 - belongs_to :group
-- belongs_to:user
+- belongs_to :user
 
 ## groups_usersテーブル（中間テーブル）
 |Column|Type|Options|
