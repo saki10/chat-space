@@ -1,47 +1,24 @@
-chat Space
-## usersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|password|string|null: false｜
-|Password confirmation|string|null: false|
-|email|string|null: false|
-|nickname|string|null: false|
-### Association
-- has_many :chat
-- has_many :comments
--belongs_to :chats_users 
+# README
 
-## chatテーブル
-|Column|Type|Options|
-|------|----|-------|
-|chat_member|text|null: false,|
-|chat_goup|text|string|foreign_key: true|
-|group_name|string|null: false|
-|send|string|null: false|
-### Association
-- belongs_to :user
-- has_many :comments
-- belongs_to :chats_users  
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-## commentsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|text|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|poto|text|null: false|
-|comment_id|integer|null: false, foreign_key: true|
-### Association
-- has_many :chat
-- belongs_to:user
-- belongs_to :chats_users
+Things you may want to cover:
 
-## chats_usersテーブル（中間テーブル）
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+* Ruby version
 
-### Association
-- belongs_to :chat
-- belongs_to :user
-- belongs_to :comments
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
