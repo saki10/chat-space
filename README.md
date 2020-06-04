@@ -16,7 +16,6 @@ chat Space
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-||string|null: false|
 ### Association
 - has_many :comments
 - has_many :groups_users
