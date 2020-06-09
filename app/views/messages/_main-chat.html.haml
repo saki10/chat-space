@@ -1,0 +1,23 @@
+.main
+  .main-header
+    .main-header-left 
+      .main-header-left-top test
+      .main-header-left-bottom member
+    .main-header-right Edit
+  .messages
+    .messages-box
+      .messages-box-top
+        .messages-box-top-name masa
+        .messages-box-top-date 2020-06-06
+      .messages-box-text おはよう
+
+  .form
+    .form-top
+      .form-top-coment
+        %input{type: "text", class: "form-top-coment-type", placeholder: "type a message"}
+        .form-top-coment-photos
+          %label{class: "input-box__image"}
+            = icon('fas', 'image')
+            %input{type: "file",class:"form-top-coment-photo"}
+      .form-top-coment-send
+        %input{type: "submit", value: "send",class: "form-top-coment-send-btn"}
