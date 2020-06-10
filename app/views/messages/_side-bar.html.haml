@@ -2,10 +2,13 @@
   .side-header
     .top-items
       .name
-        .user masa
+        .user
+          = current_user.name
         .icon
-          %i.far.fa-edit
-          %i.fas.fa-cog
+          = link_to '#' do
+            %i.far.fa-edit
+          = link_to edit_user_path(current_user) do
+            %i.fas.fa-cog
 
 
   .groups
