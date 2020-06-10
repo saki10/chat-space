@@ -8,6 +8,7 @@
 
 .side {
   width: 300px;
+  
  
   .side-header {
     background-color: #253141;
@@ -37,11 +38,14 @@
           .icon {
           height: 20px;
           color: white;
+
             .fa-edit{
               padding-right: 5px;
+              color: white;
             }
             .fa-cog{
               padding-right: 5px;
+              color: white;
             }
           }
         } 
