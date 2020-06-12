@@ -9,19 +9,16 @@
     .main-header-right 
       =link_to edit_group_path(@group) do
         Edit
+        
   .messages
     = render @messages
 
-  .form
-    .form-top
-      .form-top-coment
-        %input{type: "text", class: "form-top-coment-type", placeholder: "type a message"}
-        .form-top-coment-photos
-          %label{class: "input-box__image"}
-            = link_to group_messages_path(@group) do
-              = icon('fas', 'image')
-              %input{type: "file",class:"form-top-coment-photo"}
-      .form-top-coment-send
-        %input{type: "submit", value: "send",class: "form-top-coment-send-btn"}
+  .footer
+    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
+      .form__contents
+        = f.text_field :text, class: "form__input-contents", placeholder: "type a message"
+        = f.label :image, class: 'form__inputimage' do
+          = icon('fas', 'image', class: 'form__icon')
+          = f.file_field :image, class:"Hidden"
+      = f.submit "send", class: "form__send"
 
-       
