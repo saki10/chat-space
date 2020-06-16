@@ -127,9 +127,8 @@
 .messages {
   width: calc(100vw - 300px);
   background-color: #fafafa; 
-  display: flex;
   height: calc(100vh - 190px);
- 
+  overflow: scroll;
   &-box {
     padding-left: 40px;
 

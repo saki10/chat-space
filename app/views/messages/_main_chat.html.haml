@@ -9,14 +9,14 @@
     .main-header-right 
       =link_to edit_group_path(@group) do
         Edit
-        
+  
   .messages
     = render @messages
 
   .footer
     = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
       .form__contents
-        = f.text_field :text, class: "form__input-contents", placeholder: "type a message"
+        = f.text_field :content, class: "form__input-contents", placeholder: "type a message"
         = f.label :image, class: 'form__inputimage' do
           = icon('fas', 'image', class: 'form__icon')
           = f.file_field :image, class:"Hidden"
