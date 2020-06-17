@@ -21,7 +21,7 @@ function buildHTML(message){
     return html;
   } else {
     let html =
-    `<div class="messages-box.">
+    `<div class="messages-box">
       <div class="messages-box-top">
         <div class="messages-box-top-name">
           ${message.user_name}
