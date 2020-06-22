@@ -1,9 +1,10 @@
 .main
   .main-header
     .main-header-left 
-      .main-header-left-top 
+      .main-header-left-top  
         = @group.name
       .main-header-left-bottom 
+        Member
         - @group.users.each do |user|
           = user.name
     .main-header-right 
